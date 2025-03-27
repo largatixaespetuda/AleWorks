@@ -9,37 +9,102 @@
 </head>
 <body>
     
-<h1 class="center-content">Images - Public domain</h1>
+    <div class="font-controls">
+        <button class="font-button" id="decreaseFont">A-</button>
+        <button class="font-button" id="increaseFont">A+</button>
+    </div>
+    
+    <button class="contrast-button" id="contrastToggle">Alto Contraste</button>
+    
+    <h1 class="center-content">Images - Public domain</h1>
 
-<section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
-    <div class="container d-flex align-items-center">
+    <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
+        <div class="container d-flex align-items-center">
+                <div class="col-5">
+                        <h2>O Peixe Borboleta-bicuda</h2>
+                        <p class="p-2">
+                            O peixe Borboleta-bicuda é uma espécie da família Chaetodontidae encontrada em arrecifes dos oceanos Pacífico e Índico. É uma das três espécies do género Chelmon, todas conhecidas por terem longos bicos. Durante o dia se alimentam, enquanto à noite repousam em rochas e corais.
+                        </p>
+                </div>
+                <div class="col-2">
+
+                </div>
+                <div class="col-5">
+                    <div class="center-content">
+                        <img class="image-size" src="Chelmon_rostratus_Kupferstreifen-Pinzettfisch.jpg" alt="Borboleta-bicuda">
+                    </div>
+                    
+                    <div class="center-content">
+                        <p class="mt-2">
+                            <a class="simple-button" href="https://commons.wikimedia.org/wiki/File:Chelmon_rostratus_Kupferstreifen-Pinzettfisch.jpg">Page Url</a> |
+                            <a class="simple-button" href="https://upload.wikimedia.org/wikipedia/commons/0/0f/Chelmon_rostratus_Kupferstreifen-Pinzettfisch.jpg">File Url</a>
+                        </p>
+                        <h4>Descrição</h4>
+                        <p>BS Turner Hof, Public domain, via Wikimedia Commons</p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="container d-flex align-items-center">
             <div class="col-5">
-                    <h2>O Peixe Borboleta-bicuda</h2>
-                    <p class="p-2">
-                        O peixe Borboleta-bicuda é uma espécie da família Chaetodontidae encontrada em arrecifes dos oceanos Pacífico e Índico. É uma das três espécies do género Chelmon, todas conhecidas por terem longos bicos. Durante o dia se alimentam, enquanto à noite repousam em rochas e corais.
+                <div class="center-content">
+                    <img class="image-size" src="Sealife-Munich-5.jpeg" alt="Borboleta-bicuda-2">
+                </div>
+                
+                <div class="center-content">
+                    <p class="mt-2">
+                        <a class="simple-button" href="https://commons.wikimedia.org/wiki/File:Sealife-Munich-5.jpg">Page Url</a> |
+                        <a class="simple-button" href="https://upload.wikimedia.org/wikipedia/commons/f/fd/Sealife-Munich-5.jpg">File Url</a>
                     </p>
+                    <h4>Descrição</h4>
+                    <p>MartinThoma, CC0, via Wikimedia Commons</p>
+                </div>
             </div>
             <div class="col-2">
 
             </div>
             <div class="col-5">
-                <div class="center-content">
-                    <img class="image-size" src="Chelmon_rostratus_Kupferstreifen-Pinzettfisch.jpg" alt="Borboleta-bicuda">
-                </div>
-                
-                <div class="center-content">
-                    <p class="mt-2">
-                        <a class="simple-button" href="https://commons.wikimedia.org/wiki/File:Chelmon_rostratus_Kupferstreifen-Pinzettfisch.jpg">Page Url</a> |
-                        <a class="simple-button" href="https://upload.wikimedia.org/wikipedia/commons/0/0f/Chelmon_rostratus_Kupferstreifen-Pinzettfisch.jpg">File Url</a>
-                    </p>
-                    <h4>Descrição</h4>
-                    <p>BS Turner Hof, Public domain, via Wikimedia Commons</p>
-                </div>
-            </div>
+                <h2>Curiosidade sobre o Borboleta-bicuda</h2>
+                <p class="p-2">
+                    O peixe Borboleta-bicuda é uma espécie da família Chaetodontidae encontrada em arrecifes dos oceanos Pacífico e Índico. É uma das três espécies do género Chelmon, todas conhecidas por terem longos bicos. Durante o dia se alimentam, enquanto à noite repousam em rochas e corais. Curiosamente, esses peixes formam pares monogâmicos que permanecem juntos por vários anos, sendo frequentemente observados nadando em dupla pelos recifes de coral.
+                </p>
+        </div>
     </div>
-</section>
+    
+    </section>
 
+    <script>
+        document.getElementById('contrastToggle').addEventListener('click', function() {
+            document.body.classList.toggle('high-contrast');
+            
+            // Altera o texto do botão
+            if (document.body.classList.contains('high-contrast')) {
+                this.textContent = 'Contraste Normal';
+            } else {
+                this.textContent = 'Alto Contraste';
+            }
+        });
+
+        // Controles de tamanho de fonte
+        const decreaseBtn = document.getElementById('decreaseFont');
+        const increaseBtn = document.getElementById('increaseFont');
+        const htmlElement = document.documentElement;
+        let currentFontSize = 100; // Tamanho padrão (100%)
+
+        decreaseBtn.addEventListener('click', () => {
+            if (currentFontSize > 70) {
+                currentFontSize -= 10;
+                htmlElement.style.fontSize = currentFontSize + '%';
+            }
+        });
+
+        increaseBtn.addEventListener('click', () => {
+            if (currentFontSize < 150) {
+                currentFontSize += 10;
+                htmlElement.style.fontSize = currentFontSize + '%';
+            }
+        });
+    </script>
 
 </body>
 </html>
-
